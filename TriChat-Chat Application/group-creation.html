@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WhatsApp-Style Group Creation</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/tailwindcss-colors.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/groupCreation.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="images/noGrpPfp.png" alt="Group Icon" />
+                <h1>New Group</h1>
+            </div>
+
+            <div class="group-name">
+                <input type="text" placeholder="Group Name" id="groupName" />
+            </div>
+
+            <!-- Contacts List -->
+            <div class="contacts-list" id="contacts-section"></div>
+
+            <div class="create-button" id="createGroupBtn">
+                Create Group
+            </div>
+        </div>
+
+        <script src="assets/js/classes.js"></script>
+        <script src="assets/js/functions.js"></script>
+        <script>
+            window.onload = function() {
+                initializeUsers();
+                initializeCurrentUser();
+                initializeMessages();
+                renderContactsForGroupCreation();
+            };
+        </script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/tailwindcss-colors.css">
+  <link rel="stylesheet" href="assets/css/contactForm.css">
+  <title>Add New Contact</title>
+</head>
+<body>
+
+<form id="add-contact-form">
+  <h2>Add New Contact</h2>
+
+  <input type="text" id="contact-name" placeholder="Enter name" required><br>
+  <input type="text" id="contact-phone" placeholder="Enter phone number" required><br>
+
+  <button type="button" onclick="AddContactToAUser()">Add Contact</button>
+
+  <a href="index.html"><button type="button" class="back-button">Go back</button></a>
+</form>
+
+<script src="assets/js/classes.js"></script>
+<script src="assets/js/functions.js"></script>
+<script>
+  window.onload = function() {
+    initializeUsers();
+    initializeCurrentUser();
+    initializeMessages();
+    placePhoneNumber(retrieveCookie("phoneNumber"));
+    currentUser.getRequests().remove(retrieveCookie("phoneNumber"));
+    document.cookie =`phoneNumber=;`;
+
+  };
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

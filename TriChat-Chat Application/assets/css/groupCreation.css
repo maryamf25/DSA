@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    background: var(--emerald-600);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.group-name {
+    padding: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.group-name input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.contacts-list {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.contacts-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb {
+    background: var(--emerald-600);;
+    border-radius: 4px;
+}
+
+.contacts-list::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.contact:last-child {
+    border-bottom: none;
+}
+
+/*.contact img {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border-radius: 50%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+.contact-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.contact-details span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.contact-details small {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.contact input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--emerald-600);;
+}
+
+.create-button {
+    background: var(--emerald-600);;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background: var(--emerald-600);;
+}

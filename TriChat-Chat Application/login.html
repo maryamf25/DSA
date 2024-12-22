@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/tailwindcss-colors.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <title>Login</title>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Login to TriChat</h2>
+
+  <!-- Login Form -->
+  <div id="login-form">
+    <input type="text" id="login-username" placeholder="Username" required>
+    <input type="text" id="login-phone" placeholder="Phone Number" required>
+    <button onclick="login()">Login</button>
+    <div class="form-toggle">
+      <p style="color: black">Don't have an account? <a href="javascript:void(0);" onclick="toggleForm()">Sign up</a></p>
+    </div>
+  </div>
+
+  <!-- Signup Form -->
+  <div id="signup-form" style="display: none;">
+    <input type="text" id="signup-username" placeholder="Username" required>
+    <input type="text" id="signup-phone" placeholder="Phone Number" required>
+    <button onclick="signup()">Sign Up</button>
+    <div class="form-toggle">
+      <p style="color: black">Already have an account? <a href="javascript:void(0);" onclick="toggleForm()">Login</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/classes.js"></script>
+<script src="assets/js/functions.js"></script>
+<script>
+  window.onload = function() {
+    initializeUsers();
+    initializeCurrentUser();
+    initializeMessages();
+  };
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
